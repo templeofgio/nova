@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA</title>
+    <!-- Шрифты: Inter (основной) и JetBrains Mono (для акцентов) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- кастомный курсор -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- хедер -->
+    <header class="header">
+        <div class="logo">NOVA</div>
+        <nav class="nav-links">
+            <a href="#">Features</a>
+            <a href="#">Options</a>
+            <a href="#">Price</a>
+            <a href="#">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- главная hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">The future of development</span>
+            <h1>NOVA IDE<br><span style="color:#8F9BB3;">by GiO</span></h1>
+            <div class="hero-description">
+                Rethinking the workflow. Lightning-fast performance, intelligent code analysis and seamless collaboration.
+            </div>
+            <div class="cta-group">
+                <a href="#" class="btn btn-primary" id="showModalBtn">Try it for free</a>
+                <a href="#" class="btn btn-outline">Watch the video</a>
+            </div>
+        </div>
+        <div class="hero-grid"></div>
+    </section>
+
+    <!-- секция с фичами -->
+    <section>
+        <div class="section-header">
+            <h2>Tools, that create magic</h2>
+            <p>Every detail is thought out for uncompromising efficiency.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⌨️</div>
+                <h3>Smart autocomplete</h3>
+                <p>Analyzes your project and suggests whole constructions, not just words.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Instant navigation</h3>
+                <p>Navigate to any file, class, or symbol in milliseconds.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛠️</div>
+                <h3>One-click refactoring</h3>
+                <p>Secure, smart changes to the entire codebase.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Search everywhere</h3>
+                <p>Indexing everything: code, commits, tasks, documentation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- блок с превью редактора (JetBrains style) -->
+    <section>
+        <div class="code-preview floating">
+            <div class="code-header">
+                <span class="code-dot"></span>
+                <span class="code-dot"></span>
+                <span class="code-dot"></span>
+            </div>
+            <div class="code-body">
+                <span class="keyword">fun</span> <span class="func">main</span>() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">val</span> project = <span class="func">loadProject</span>(<span class="string">"nova-core"</span>)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;project.modules<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="func">filter</span> { it.isKotlin }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="func">forEach</span> { module -><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">analyze</span>(module)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// mining is completed</span><br>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- таблица сравнения -->
+    <section>
+        <div class="section-header">
+            <h2>NOVA VS The Rest</h2>
+            <p>An honest comparison of key features.</p>
+        </div>
+        <table class="comparison-table">
+            <thead>
+                <tr><th>Функция</th><th>NOVA</th><th>Others IDE</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Real-time type inference</td><td class="yes">✓</td><td>⚡ Partly</td></tr>
+                <tr><td>Built-in AI assistant</td><td class="yes">✓</td><td>✗</td></tr>
+                <tr><td>Profiler without delay</td><td class="yes">✓</td><td>A plugin is required</td></tr>
+                <tr><td>Support for monorepositories</td><td class="yes">Native</td><td>Complex setup</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- футер -->
+    <footer class="footer">
+        <div>© 2025 NOVA by GiO. All rights reserved.</div>
+        <div class="footer-links">
+            <span>Politics</span>
+            <span>Conditions</span>
+            <span>Instagram</span>
+        </div>
+    </footer>
+
+    <!-- модальное окно -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h3>Get started for free</h3>
+            <p style="margin-bottom: 2rem; color: #A9B7C6;">A 30-day trial of all NOVA features. Without restrictions.</p>
+            <div style="background: #0F1117; border-radius: 16px; padding: 2rem; text-align: center; border: 1px solid #2C313D;">
+                <span style="font-family: 'JetBrains Mono'; color: #B5C4D1;">→ demo.novaide.com</span>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
